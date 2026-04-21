@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>MPower Garage Ealing | Car Service, MOT & Repairs in West London</title>
+  <meta name="description" content="MPower Garage in Ealing, West London — expert car servicing, MOT, diagnostics, brakes and tyres. Trusted by Ealing drivers. Book your service today." />
+  <meta name="keywords" content="car service Ealing, MOT Ealing, auto repair Ealing, garage Ealing, car repair West London, engine diagnostics Ealing, tyre fitting Ealing, car service W5" />
+  <meta name="author" content="MPower Garage" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://mpowergarage.co.uk/" />
+
+  <!-- Open Graph (Social sharing) -->
+  <meta property="og:title" content="MPower Garage Ealing | Car Service & MOT West London" />
+  <meta property="og:description" content="Expert car servicing, MOT and repairs in Ealing, West London. Book online today at MPower Garage." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mpowergarage.co.uk/" />
+  <meta property="og:image" content="https://mpowergarage.co.uk/og-image.jpg" />
+
+  <!-- Schema.org Structured Data (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "MPower Garage",
+    "url": "https://mpowergarage.co.uk",
+    "telephone": "+44-XXXX-XXX-XXX",
+    "email": "info@mpowergarage.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Your Street",
+      "addressLocality": "Ealing",
+      "postalCode": "W5 1AA",
+      "addressCountry": "GB"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "14:00" }
+    ],
+    "description": "Professional auto repair and servicing. MOT, diagnostics, brakes, tyres and more.",
+    "priceRange": "££"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --m-blue: #0066B1;
+      --m-navy: #003D78;
+      --m-red: #E22718;
+      --m-light-blue: #81C4FF;
+      --dark: #f4f8fd;
+      --dark2: #ffffff;
+      --dark3: #e8f1fa;
+      --dark4: #dceaf6;
+      --border: rgba(0,61,120,0.12);
+      --text: #0d1f35;
+      --muted: #4a6080;
+      --stripe-height: 4px;
+      --font-display: 'Barlow Condensed', sans-serif;
+      --font-body: 'Barlow', sans-serif;
+    }
+
+
+    .hero-car {
+      position: absolute;
+      right: -20px;
+      bottom: 60px;
+      width: 55%;
+      max-width: 680px;
+      opacity: 0.92;
+      pointer-events: none;
+    }
+    @media (max-width: 900px) {
+      .hero-car {
+        position: relative;
+        width: 100%;
+        right: auto;
+        bottom: auto;
+        margin-top: 2rem;
+        opacity: 0.85;
+      }
+    }
+    @media (max-width: 600px) {
+      .hero-car { display: none; }
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: #f4f8fd; color: var(--text); overflow-x: hidden; }
+
+    /* M STRIPE — signature 3-color stripe */
+    .m-stripe {
+      height: var(--stripe-height);
+      background: linear-gradient(90deg, var(--m-navy) 33.3%, var(--m-blue) 33.3% 66.6%, var(--m-red) 66.6%);
+    }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(244,248,253,0.97);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(0,61,120,0.15);
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0 2rem; height: 64px;
+    }
+    .logo {
+      font-family: var(--font-display);
+      font-size: 22px; font-weight: 700;
+      letter-spacing: 0.12em; color: var(--text);
+      text-decoration: none;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .logo-badge {
+      display: flex; gap: 3px;
+    }
+    .logo-badge span {
+      display: block; width: 6px; height: 18px; border-radius: 1px;
+    }
+    .logo-badge span:nth-child(1) { background: var(--m-navy); }
+    .logo-badge span:nth-child(2) { background: var(--m-blue); }
+    .logo-badge span:nth-child(3) { background: var(--m-red); }
+    .logo-text { letter-spacing: 0.08em; }
+    .logo-text em { font-style: normal; color: var(--m-blue); }
+
+    .nav-links {
+      display: flex; gap: 2.5rem; list-style: none;
+    }
+    .nav-links a {
+      font-family: var(--font-display);
+      font-size: 13px; font-weight: 500;
+      letter-spacing: 0.12em; color: var(--muted);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a.cta {
+      color: var(--m-red); border: 1px solid rgba(226,39,24,0.4);
+      padding: 6px 16px; border-radius: 2px;
+    }
+    .nav-links a.cta:hover { background: var(--m-red); color: #fff; }
+
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 4px;
+    }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--text); transition: all 0.3s; }
+
+    .mobile-menu {
+      display: none; flex-direction: column;
+      background: #ffffff; border-bottom: 1px solid rgba(0,61,120,0.15);
+      padding: 1rem 2rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: var(--font-display);
+      font-size: 16px; letter-spacing: 0.1em; color: var(--muted);
+      text-decoration: none; padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-menu a:hover { color: var(--text); }
+    .mobile-menu a:last-child { border-bottom: none; color: var(--m-red); }
+
+    /* SECTIONS */
+    section { display: none; }
+    section.active { display: block; }
+
+    /* HERO */
+    .hero {
+      min-height: calc(100vh - 68px);
+      display: grid; grid-template-rows: 1fr auto;
+      background: url('https://images.unsplash.com/photo-1617531653332-bd46c24f2068?auto=format&fit=crop&w=1920&q=80') center center / cover no-repeat;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(135deg, rgba(0,15,35,0.88) 0%, rgba(0,40,80,0.72) 50%, rgba(0,20,50,0.65) 100%);
+      z-index: 1;
+    }
+    .hero > * {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-content {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 5rem 2rem 4rem 4rem;
+      max-width: 620px; margin: 0; width: 100%;
+    }
+    .hero-eyebrow {
+      font-family: var(--font-display);
+      font-size: 11px; letter-spacing: 0.3em; color: var(--m-light-blue);
+      margin-bottom: 1.5rem; display: flex; align-items: center; gap: 12px;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: block; width: 32px; height: 2px; background: var(--m-blue);
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(52px, 9vw, 110px);
+      font-weight: 700; line-height: 0.95;
+      letter-spacing: -0.01em;
+      max-width: 700px;
+      color: #ffffff;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+    }
+    .hero h1 .line-red { color: var(--m-red); }
+    .hero h1 .line-blue { color: var(--m-blue); }
+    .hero-sub {
+      font-size: 16px; color: rgba(255,255,255,0.75); max-width: 420px;
+      line-height: 1.75; margin: 2rem 0;
+    }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-red {
+      font-family: var(--font-display);
+      font-size: 12px; font-weight: 600; letter-spacing: 0.15em;
+      background: var(--m-red); color: #fff;
+      border: none; padding: 14px 32px;
+      cursor: pointer; border-radius: 2px; transition: background 0.2s;
+      text-decoration: none; display: inline-block;
+    }
+    .btn-red:hover { background: #c41e0e; }
+    .btn-outline {
+      font-family: var(--font-display);
+      font-size: 12px; font-weight: 600; letter-spacing: 0.15em;
+      background: transparent; color: #ffffff;
+      border: 1px solid rgba(255,255,255,0.4); padding: 14px 32px;
+      cursor: pointer; border-radius: 2px; transition: border-color 0.2s;
+      text-decoration: none; display: inline-block;
+    }
+    .btn-outline:hover { border-color: #fff; }
+
+    .hero-bg-text {
+      position: absolute; right: -2%; bottom: -5%;
+      font-family: var(--font-display);
+      font-size: clamp(120px, 18vw, 220px); font-weight: 700;
+      color: rgba(0,61,120,0.04); letter-spacing: -0.02em;
+      user-select: none; pointer-events: none; line-height: 1;
+    }
+    .hero-accent {
+      position: absolute; top: 0; right: 0;
+      width: 40%; height: 100%;
+      background: linear-gradient(135deg, transparent 50%, rgba(0,102,177,0.12) 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* STATS */
+    .stats-row {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      max-width: 100%;
+      background: rgba(8,20,45,0.85);
+    }
+    .stat-item {
+      padding: 2rem 3rem;
+      border-right: 1px solid rgba(255,255,255,0.1);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: 44px; font-weight: 700; color: var(--m-blue);
+      line-height: 1;
+    }
+    .stat-label {
+      font-family: var(--font-display);
+      font-size: 11px; letter-spacing: 0.15em; color: rgba(255,255,255,0.5);
+      margin-top: 6px;
+    }
+
+    /* PAGE SECTIONS */
+    .page-wrap { max-width: 1200px; margin: 0 auto; padding: 5rem 2rem; }
+    .section-eyebrow {
+      font-family: var(--font-display);
+      font-size: 11px; letter-spacing: 0.25em; color: var(--m-blue);
+      display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;
+    }
+    .section-eyebrow::before { content: ''; width: 24px; height: 2px; background: var(--m-blue); display: block; }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 5vw, 52px); font-weight: 700;
+      line-height: 1; margin-bottom: 1rem;
+    }
+    .section-sub { font-size: 15px; color: var(--muted); max-width: 480px; line-height: 1.75; margin-bottom: 3rem; }
+
+    /* SERVICES */
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: var(--border);
+    }
+    .service-card {
+      background: var(--dark2); padding: 2.5rem 2rem;
+      transition: background 0.25s;
+      position: relative; overflow: hidden;
+    }
+    .service-card::after {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 3px; background: linear-gradient(90deg, var(--m-navy), var(--m-blue), var(--m-red));
+      transform: scaleX(0); transform-origin: left; transition: transform 0.3s;
+    }
+    .service-card:hover { background: #dceaf6; }
+    .service-card:hover::after { transform: scaleX(1); }
+    .service-num {
+      font-family: var(--font-display);
+      font-size: 11px; letter-spacing: 0.2em; color: var(--m-blue);
+      margin-bottom: 1.5rem;
+    }
+    .service-card h3 {
+      font-family: var(--font-display);
+      font-size: 20px; font-weight: 600; margin-bottom: 0.75rem;
+    }
+    .service-card p { font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+    /* PRICING */
+    .pricing-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: var(--border);
+    }
+    .price-card { background: var(--dark2); padding: 2.5rem 2rem; }
+    .price-card.featured {
+      background: #dceaf6;
+      position: relative;
+    }
+    .featured-tag {
+      font-family: var(--font-display);
+      font-size: 10px; letter-spacing: 0.2em;
+      background: var(--m-red); color: #fff;
+      padding: 4px 12px; border-radius: 2px;
+      display: inline-block; margin-bottom: 1rem;
+    }
+    .price-tier {
+      font-family: var(--font-display);
+      font-size: 11px; letter-spacing: 0.2em; color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+    .price-card h3 {
+      font-family: var(--font-display);
+      font-size: 26px; font-weight: 700; margin-bottom: 0.5rem;
+    }
+    .price-amount {
+      font-family: var(--font-display);
+      font-size: 36px; font-weight: 700; color: var(--m-blue);
+      margin-bottom: 2rem;
+    }
+    .price-amount span { font-size: 14px; color: var(--muted); font-weight: 400; }
+    .price-list { list-style: none; font-size: 13px; color: var(--muted); }
+    .price-list li {
+      padding: 8px 0; border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .price-list li::before {
+      content: ''; display: block; width: 6px; height: 6px;
+      background: var(--m-blue); border-radius: 50%; flex-shrink: 0;
+    }
+    .price-list li:last-child { border-bottom: none; }
+
+    /* GALLERY */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 220px);
+      gap: 2px;
+    }
+    .gallery-item {
+      background: var(--dark3);
+      position: relative; overflow: hidden;
+      display: flex; align-items: flex-end;
+      cursor: pointer;
+    }
+    .gallery-item:first-child { grid-column: span 2; }
+    .gallery-fill {
+      position: absolute; inset: 0;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover .gallery-fill { transform: scale(1.04); }
+    .g1 .gallery-fill { background: linear-gradient(135deg, #c8dff5 0%, #a8c8ee 100%); }
+    .g2 .gallery-fill { background: linear-gradient(135deg, #dce8f5 0%, #b8d0ec 100%); }
+    .g3 .gallery-fill { background: linear-gradient(135deg, #c0d8f0 0%, #a0c0e8 100%); }
+    .g4 .gallery-fill { background: linear-gradient(135deg, #d4e8f8 0%, #b0d0f0 100%); }
+    .g5 .gallery-fill { background: linear-gradient(135deg, #c8e0f5 0%, #a8c8ec 100%); }
+    .gallery-label {
+      position: relative; z-index: 2;
+      padding: 16px 20px;
+      font-family: var(--font-display);
+      font-size: 11px; letter-spacing: 0.18em; color: var(--m-navy);
+      background: linear-gradient(transparent, rgba(0,0,0,0.5));
+      width: 100%;
+    }
+
+    /* ABOUT */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .about-text p {
+      font-size: 15px; color: var(--muted); line-height: 1.85; margin-bottom: 1.25rem;
+    }
+    .values-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1px; background: var(--border); margin-top: 2.5rem;
+    }
+    .value-item { background: var(--dark2); padding: 1.5rem; }
+    .value-item h4 {
+      font-family: var(--font-display);
+      font-size: 14px; font-weight: 600; letter-spacing: 0.08em;
+      color: var(--m-blue); margin-bottom: 6px;
+    }
+    .value-item p { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+    .about-visual-block {
+      position: sticky; top: 80px;
+    }
+    .about-big-text {
+      font-family: var(--font-display);
+      font-size: clamp(80px, 12vw, 140px);
+      font-weight: 700; line-height: 0.85;
+      background: linear-gradient(135deg, var(--m-navy), var(--m-blue) 50%, rgba(226,39,24,0.6));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 2rem;
+    }
+    .cert-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 2rem; }
+    .cert-badge {
+      font-family: var(--font-display);
+      font-size: 10px; letter-spacing: 0.15em;
+      border: 1px solid rgba(0,61,120,0.2); color: var(--m-navy);
+      padding: 8px 14px; border-radius: 2px;
+    }
+
+    /* CONTACT */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: start; }
+    .contact-details { display: flex; flex-direction: column; gap: 2rem; }
+    .contact-item h4 {
+      font-family: var(--font-display);
+      font-size: 10px; letter-spacing: 0.25em; color: var(--m-blue);
+      margin-bottom: 8px;
+    }
+    .contact-item p { font-size: 14px; color: var(--muted); line-height: 1.8; }
+    .hours-row { display: flex; justify-content: space-between; font-size: 13px; padding: 6px 0; border-bottom: 1px solid var(--border); }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-day { color: var(--muted); }
+    .hours-time { color: var(--text); }
+    .hours-closed { color: var(--m-red); }
+
+    .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label {
+      font-family: var(--font-display);
+      font-size: 10px; letter-spacing: 0.2em; color: var(--muted);
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: var(--dark3); border: 1px solid var(--border);
+      color: var(--text); padding: 12px 14px;
+      font-size: 14px; font-family: var(--font-body);
+      border-radius: 2px; outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--m-blue); }
+    .form-group select option { background: var(--dark2); }
+    .form-group textarea { min-height: 110px; resize: vertical; }
+    .form-submit {
+      font-family: var(--font-display);
+      font-size: 12px; font-weight: 600; letter-spacing: 0.15em;
+      background: var(--m-red); color: #fff;
+      border: none; padding: 16px;
+      cursor: pointer; border-radius: 2px;
+      transition: background 0.2s; width: 100%;
+    }
+    .form-submit:hover { background: #c41e0e; }
+    .form-note { font-size: 12px; color: var(--muted); text-align: center; margin-top: 4px; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      background: #e8f1fa;
+    }
+    .footer-inner {
+      max-width: 1200px; margin: 0 auto;
+      padding: 3rem 2rem 2rem;
+      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem;
+    }
+    .footer-brand p { font-size: 13px; color: var(--muted); line-height: 1.8; margin-top: 1rem; max-width: 280px; }
+    .footer-col h4 {
+      font-family: var(--font-display);
+      font-size: 11px; letter-spacing: 0.18em; color: var(--text);
+      margin-bottom: 1rem;
+    }
+    .footer-col a {
+      display: block; font-size: 13px; color: var(--muted);
+      text-decoration: none; padding: 4px 0; transition: color 0.2s;
+    }
+    .footer-col a:hover { color: var(--text); }
+    .footer-bottom {
+      max-width: 1200px; margin: 0 auto;
+      padding: 1.5rem 2rem;
+      border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-bottom p { font-size: 12px; color: #444; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .pricing-grid { grid-template-columns: 1fr; gap: 1px; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, 200px); }
+      .gallery-item:first-child { grid-column: span 2; }
+      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .about-visual-block { position: static; }
+      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: span 2; }
+      .stats-row { grid-template-columns: 1fr; }
+      .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
+      .stat-item:last-child { border-bottom: none; }
+    }
+    @media (max-width: 600px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+      .gallery-item { height: 180px; }
+      .gallery-item:first-child { grid-column: span 1; }
+      .form-row { grid-template-columns: 1fr; }
+      .hero-content { padding: 3rem 1.5rem; }
+      .page-wrap { padding: 3rem 1.5rem; }
+      .stat-item { padding: 1.5rem 1.5rem; }
+      .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-brand { grid-column: span 1; }
+      .about-big-text { font-size: 80px; }
+      .values-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="m-stripe"></div>
+
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="#" onclick="show('home')">
+      <div class="logo-badge">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="logo-text">M<em>POWER</em> GARAGE</div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#" onclick="show('home')">Home</a></li>
+      <li><a href="#" onclick="show('services')">Services</a></li>
+      <li><a href="#" onclick="show('pricing')">Pricing</a></li>
+      <li><a href="#" onclick="show('gallery')">Gallery</a></li>
+      <li><a href="#" onclick="show('about')">About</a></li>
+      <li><a href="#" onclick="show('contact')" class="cta">Book Now</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#" onclick="showMobile('home')">Home</a>
+    <a href="#" onclick="showMobile('services')">Services</a>
+    <a href="#" onclick="showMobile('pricing')">Pricing</a>
+    <a href="#" onclick="showMobile('gallery')">Gallery</a>
+    <a href="#" onclick="showMobile('about')">About</a>
+    <a href="#" onclick="showMobile('contact')">Book Now</a>
+  </div>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="active">
+  <div class="hero">
+    <div class="hero-bg-text">MPG</div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Professional Auto Service</div>
+      <h1>
+        <span>BUILD</span><br>
+        <span class="line-blue">TO</span><br>
+        <span class="line-red">PERFORM.</span>
+      </h1>
+      <p class="hero-sub">Ealing's trusted car service and repair specialists. Expert diagnostics, MOT, brakes, tyres and full servicing — right here in West London.</p>
+      <div class="hero-btns">
+        <a href="#" class="btn-red" onclick="show('contact'); return false;">BOOK A SERVICE</a>
+        <a href="#" class="btn-outline" onclick="show('services'); return false;">OUR SERVICES</a>
+      </div>
+    </div>
+    <div class="stats-row">
+      <div class="stat-item">
+        <div class="stat-num">12+</div>
+        <div class="stat-label">YEARS IN BUSINESS</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">4,800+</div>
+        <div class="stat-label">VEHICLES SERVICED</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">SATISFACTION GUARANTEED</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="page-wrap">
+    <div class="section-eyebrow">What We Do</div>
+    <h2 class="section-title">Full-range<br>auto services</h2>
+    <p class="section-sub">Serving drivers across Ealing, Acton, Hanwell, Southall and all of West London. Certified technicians, every time.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <h3>Engine Diagnostics</h3>
+        <p>Advanced computer diagnostics to identify faults quickly and accurately. No guesswork, just results.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <h3>Tyre & Wheel</h3>
+        <p>Supply, fitting, balancing and alignment for all makes and tyre sizes. Road-ready every time.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <h3>Oil & Fluid Service</h3>
+        <p>Full oil changes and fluid top-ups using premium-grade products suited to your vehicle spec.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <h3>Electrics & Air Con</h3>
+        <p>Battery testing, starter motors, alternators, full electrical diagnostics and AC re-gas.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">05</div>
+        <h3>Brakes & Suspension</h3>
+        <p>Pads, discs, calipers, shock absorbers, springs and steering components. Safe stopping guaranteed.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">06</div>
+        <h3>MOT & Annual Service</h3>
+        <p>MOT preparation, full annual service and comprehensive 60-point vehicle health checks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="page-wrap">
+    <div class="section-eyebrow">Pricing</div>
+    <h2 class="section-title">Transparent,<br>fair pricing</h2>
+    <p class="section-sub">No hidden charges. You approve every cost before we start work on your vehicle.</p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-tier">ESSENTIAL</div>
+        <h3>Basic Service</h3>
+        <div class="price-amount">£59 <span>from</span></div>
+        <ul class="price-list">
+          <li>Engine oil & filter change</li>
+          <li>Tyre pressure check</li>
+          <li>All fluid top-ups</li>
+          <li>Visual safety inspection</li>
+        </ul>
+      </div>
+      <div class="price-card featured">
+        <div class="featured-tag">MOST POPULAR</div>
+        <div class="price-tier">FULL SERVICE</div>
+        <h3>Full Service</h3>
+        <div class="price-amount">£129 <span>from</span></div>
+        <ul class="price-list">
+          <li>Everything in Basic</li>
+          <li>Brake & pad inspection</li>
+          <li>Air & cabin filters</li>
+          <li>Computer diagnostics scan</li>
+          <li>60-point vehicle check</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <div class="price-tier">PREMIUM</div>
+        <h3>Major Service</h3>
+        <div class="price-amount">£229 <span>from</span></div>
+        <ul class="price-list">
+          <li>Everything in Full Service</li>
+          <li>Spark plugs & timing belt check</li>
+          <li>Gearbox fluid service</li>
+          <li>Coolant system flush</li>
+          <li>12-month parts & labour warranty</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="page-wrap">
+    <div class="section-eyebrow">Our Work</div>
+    <h2 class="section-title">Inside<br>the garage</h2>
+    <p class="section-sub">Real work, real results. A glimpse of the craftsmanship behind every job.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item g1"><div class="gallery-fill"></div><div class="gallery-label">ENGINE BAY REBUILD</div></div>
+      <div class="gallery-item g2"><div class="gallery-fill"></div><div class="gallery-label">BRAKE OVERHAUL</div></div>
+      <div class="gallery-item g3"><div class="gallery-fill"></div><div class="gallery-label">SUSPENSION WORK</div></div>
+      <div class="gallery-item g4"><div class="gallery-fill"></div><div class="gallery-label">DIAGNOSTICS LAB</div></div>
+      <div class="gallery-item g5"><div class="gallery-fill"></div><div class="gallery-label">FULL SERVICE</div></div>
+    </div>
+    <p style="margin-top:2rem; font-size:13px; color:var(--muted);">* Your own photos will replace these placeholders once the site goes live.</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="page-wrap">
+    <div class="about-grid">
+      <div>
+        <div class="section-eyebrow">Who We Are</div>
+        <h2 class="section-title">Mechanics<br>you can trust</h2>
+        <div class="about-text">
+          <p>MPower Garage has been serving the Ealing community for over 12 years. We built this garage on one principle: every driver deserves honest advice, quality parts, and skilled workmanship — without the runaround.</p>
+          <p>Our certified technicians bring decades of combined experience across European and domestic vehicles. We invest in the latest diagnostic equipment so we fix it right the first time.</p>
+          <p>From Ealing Broadway to Acton, Hanwell to Southall — we look after every vehicle with the same precision, whether it's a daily runabout or a high-performance machine.</p>
+        </div>
+        <div class="values-grid">
+          <div class="value-item"><h4>Honest</h4><p>No upselling. No surprises on the bill.</p></div>
+          <div class="value-item"><h4>Certified</h4><p>Fully qualified, insured technicians.</p></div>
+          <div class="value-item"><h4>Fast</h4><p>Most repairs completed same day.</p></div>
+          <div class="value-item"><h4>Reliable</h4><p>12-month parts & labour guarantee.</p></div>
+        </div>
+      </div>
+      <div class="about-visual-block">
+        <div class="about-big-text">M<br>PWR</div>
+        <div class="cert-row">
+          <div class="cert-badge">IMI CERTIFIED</div>
+          <div class="cert-badge">FULLY INSURED</div>
+          <div class="cert-badge">12M WARRANTY</div>
+          <div class="cert-badge">MOT APPROVED</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="page-wrap">
+    <div class="section-eyebrow">Get In Touch</div>
+    <h2 class="section-title">Book your<br>service today</h2>
+    <div class="contact-grid">
+      <div class="contact-details">
+        <div class="contact-item">
+          <h4>ADDRESS</h4>
+          <p>MPower Garage<br>Your Street<br>Ealing, London W5</p>
+        </div>
+        <div class="contact-item">
+          <h4>PHONE</h4>
+          <p>+44 XXXX XXX XXX</p>
+        </div>
+        <div class="contact-item">
+          <h4>EMAIL</h4>
+          <p>info@mpowergarage.com</p>
+        </div>
+        <div class="contact-item">
+          <h4>OPENING HOURS</h4>
+          <div>
+            <div class="hours-row"><span class="hours-day">Monday – Friday</span><span class="hours-time">8:00 – 18:00</span></div>
+            <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time">8:00 – 14:00</span></div>
+            <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-closed">Closed</span></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>FULL NAME</label>
+              <input type="text" placeholder="John Smith" autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label>PHONE NUMBER</label>
+              <input type="tel" placeholder="+44 7700 000000" autocomplete="tel" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>EMAIL ADDRESS</label>
+            <input type="email" placeholder="john@email.com" autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label>SERVICE REQUIRED</label>
+            <select>
+              <option value="">Select a service...</option>
+              <option>Basic Service (from £59)</option>
+              <option>Full Service (from £129)</option>
+              <option>Major Service (from £229)</option>
+              <option>MOT Preparation</option>
+              <option>Engine Diagnostics</option>
+              <option>Brakes / Suspension</option>
+              <option>Tyres / Wheel Alignment</option>
+              <option>Electrics / Air Con</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>YOUR VEHICLE (make, model, year)</label>
+            <input type="text" placeholder="e.g. BMW 3 Series, 2019" />
+          </div>
+          <div class="form-group">
+            <label>ADDITIONAL NOTES</label>
+            <textarea placeholder="Any specific concerns or issues you'd like us to check..."></textarea>
+          </div>
+          <button class="form-submit" onclick="submitForm()">SEND BOOKING REQUEST</button>
+          <p class="form-note">We'll confirm your booking within 2 hours during working hours.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo" style="text-decoration:none; cursor:default;">
+        <div class="logo-badge">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="logo-text">M<em>POWER</em> GARAGE</div>
+      </div>
+      <p>Professional auto servicing and repair. Trusted by thousands of drivers. We're committed to quality, transparency and getting you back on the road safely.</p>
+    </div>
+    <div class="footer-col">
+      <h4>SERVICES</h4>
+      <a href="#" onclick="show('services')">Engine Diagnostics</a>
+      <a href="#" onclick="show('services')">Brakes & Suspension</a>
+      <a href="#" onclick="show('services')">MOT & Servicing</a>
+      <a href="#" onclick="show('services')">Tyres & Wheels</a>
+      <a href="#" onclick="show('services')">Electrics & AC</a>
+    </div>
+    <div class="footer-col">
+      <h4>COMPANY</h4>
+      <a href="#" onclick="show('about')">About Us</a>
+      <a href="#" onclick="show('pricing')">Pricing</a>
+      <a href="#" onclick="show('gallery')">Gallery</a>
+      <a href="#" onclick="show('contact')">Contact</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 mpowergarage.co.uk — All rights reserved</p>
+    <p>info@mpowergarage.com</p>
+  </div>
+</footer>
+
+<script>
+  function show(id) {
+    document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.getElementById('mobile-menu').classList.remove('open');
+  }
+
+  function showMobile(id) {
+    show(id);
+  }
+
+  function toggleMenu() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  }
+
+  function submitForm() {
+    alert('Booking request sent! We will contact you within 2 hours during working hours.\n\nThank you for choosing MPower Garage.');
+  }
+</script>
+
+</body>
+</html>
