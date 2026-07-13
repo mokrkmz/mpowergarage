@@ -881,13 +881,11 @@
     document.getElementById('mobile-menu').classList.toggle('open');
   }
 
-  function submitForm() {
+function submitForm() {
     alert('Booking request sent! We will contact you within 2 hours during working hours.\n\nThank you for choosing MPower Garage.');
   }
-  <script>
-function openModal(id){document.getElementById('modal-'+id).classList.add('open')}
-function closeModal(id){document.getElementById('modal-'+id).classList.remove('open')}
-</script>
+  function openModal(id){document.getElementById('modal-'+id).classList.add('open')}
+  function closeModal(id){document.getElementById('modal-'+id).classList.remove('open')}
 </script>
 <div class="modal-overlay" id="modal-engine" onclick="if(event.target===this)closeModal('engine')">
   <div class="modal-box">
