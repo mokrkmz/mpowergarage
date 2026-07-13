@@ -539,6 +539,14 @@
       .footer-brand { grid-column: span 1; }
       .about-big-text { font-size: 80px; }
       .values-grid { grid-template-columns: 1fr; }
+      .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:999;display:none;align-items:center;justify-content:center}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;max-width:600px;width:90%;border-radius:4px;overflow:hidden;max-height:90vh;overflow-y:auto}
+.modal-box img{width:100%;height:220px;object-fit:cover}
+.modal-body{padding:2rem}
+.modal-body h2{color:#003D78;margin-bottom:1rem}
+.modal-body p{color:#444;line-height:1.8;margin-bottom:1rem}
+.modal-close{float:right;background:none;border:none;font-size:24px;cursor:pointer;color:#333}
     }
   </style>
 </head>
@@ -619,7 +627,7 @@
     <div class="services-grid">
       <div class="service-card">
         <div class="service-num">01</div>
-        <h3>Engine Diagnostics</h3>
+        <h3 onclick="openModal('engine')" style="cursor:pointer;">Engine Diagnostics ↗</h3>
         <p>Advanced computer diagnostics to identify faults quickly and accurately. No guesswork, just results.</p>
       </div>
       <div class="service-card">
@@ -876,7 +884,22 @@
   function submitForm() {
     alert('Booking request sent! We will contact you within 2 hours during working hours.\n\nThank you for choosing MPower Garage.');
   }
+  <script>
+function openModal(id){document.getElementById('modal-'+id).classList.add('open')}
+function closeModal(id){document.getElementById('modal-'+id).classList.remove('open')}
 </script>
-
+</script>
+<div class="modal-overlay" id="modal-engine" onclick="if(event.target===this)closeModal('engine')">
+  <div class="modal-box">
+    <div class="modal-body">
+      <button class="modal-close" onclick="closeModal('engine')">✕</button>
+      <h2>Engine Diagnostics Ealing</h2>
+      <img src="engine.jpg" alt="Engine Diagnostics MPower Garage Ealing">
+      <p>At MPower Garage in Ealing, we use the latest computer diagnostic equipment to identify engine faults quickly and accurately. Whether your engine warning light is on or your car is running rough, our certified technicians will pinpoint the exact problem — no guesswork, no unnecessary parts.</p>
+      <p>We cover all makes and models including BMW, Mercedes, Audi, Volkswagen, Ford, Vauxhall and more. Most diagnostics completed same day in our Ealing garage.</p>
+      <p>Book your engine diagnostic today and get back on the road with confidence.</p>
+    </div>
+  </div>
+</div>
 </body>
 </html>
