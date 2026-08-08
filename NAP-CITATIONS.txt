@@ -1,0 +1,53 @@
+Copy-paste NAP for Bing Places, Apple Business Connect, Yell, etc.
+
+Name:
+MPower Garage
+
+Address line 1:
+1 Vale Grove
+
+City / Town:
+Acton
+
+Region:
+London
+
+Postcode:
+W3 7QP
+
+Country:
+United Kingdom
+
+Phone:
++44 7444 924 382
+
+Website:
+https://mpowergarage.co.uk
+
+Email:
+info@mpowergarage.com
+
+Category:
+Mobile mechanic / Auto repair
+
+Service areas:
+Acton, Ealing, Hanwell, Southall, Chiswick, West London
+
+Hours:
+Mon-Fri 08:00-18:00
+Sat 08:00-14:00
+Sun Closed
+
+Short description:
+Mobile mechanic serving Acton, Ealing and West London. Car servicing, MOT preparation, diagnostics and repairs — we come to you. Same-day slots when available. Call or WhatsApp +44 7444 924 382.
+
+GBP service names (add each on Google Business Profile):
+- Car servicing
+- Oil change
+- Engine diagnostics
+- Brake repair
+- Suspension repair
+- MOT preparation
+- Battery replacement
+- Air conditioning service
+- Mobile mechanic
